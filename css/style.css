@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+/** Variáveis de cor **/
+
+:root {
+    /* Light */
+    --color-light-50: #f8fafc;
+
+    /* Dark */
+    --color-dark-50: #797984;
+    --color-dark-100: #312d37;
+    --color-dark-900: #000;
+
+    /* Azul */
+    --color-blue-50: #6bbef9;
+    --color-blue-100: #369EFF;
+    --color-blue-200: #2E8EEF;
+
+    /*Dark Mode*/
+    --color-darkMode-100: #6850EB;
+    --color-darkMode-200: #4831c9;
+    --color-darkMode-300: #7621d1;
+
+    /* Gradiente */
+    --color-gradient: linear-gradient(90deg, var(--color-blue-200), var(--color-blue-100), var(--color-blue-50));
+    --color-gradientDark: linear-gradient(90deg, var(--color-darkMode-100), var(--color-darkMode-300), var(--color-darkMode-200))
+}
+
+* {
+    font-family: 'Poppins' , sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    height: 100vh;
+    width: 100vw;
+    background: var(--color-gradient);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+
+#login-form {
+    background-color: var(--color-light-50);
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    border-radius: 8px;
+    gap: 30px; /*Espaçamento igual entre os elementos do formulário*/
+    box-shadow: 5px 5px 5px 5px #5555b0;
+    height: fit-content;
+}
+
+#form-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#form-hearder h1{
+    font-size: 40px;
+}
+
+#moon-icon{
+    cursor: pointer;
+    font-size: 25px;
+    border-radius: 30px;
+    padding: 6px;
+    
+}
+
+#moon-icon:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+    ;
+}
+
+#social-media img {
+    width: 35px;
+}
+
+#social-media {
+    display: flex;
+    justify-content: space-between;
+}
+
+#social-media img:hover {
+    transform: scale(1.2);
+    transition: ease-out 0.3s ;
+}
+
+#inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#input-box label {
+    font-size: 14px;
+    color: var(--color-dark-50);
+}
+
+#input-field {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    padding: 3px;
+    cursor: text;
+
+    /*label como uma única linha*/
+   
+
+}
+
+#input-field i {
+    font-size: 20px;
+    color: var(--color-dark-900);
+}
+
+#input-field input {
+    /*Largura e altura dos inputs*/
+    width: 260px;
+    font-size: 18px;
+   
+
+    /*Retira o retângulo do input para que ele seja só uma linha*/
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1px solid var(--color-blue-50);
+    
+}
+
+
+#input-field input:focus {
+    border-bottom: 2px solid var(--color-blue-50);
+}
+
+.passwordInput{
+    position: relative;
+    
+}
+
+.passwordInput #btn-password{
+    position: absolute;
+    right: 3%;
+    bottom: 10%;
+    cursor: pointer;
+}
+
+
+
+
+#forgot-password a {
+    text-decoration: none;
+    font-size: 12px;
+    color: var(--color-dark-50);
+}
+
+#forgot-password a:hover {
+    color: var(--color-blue-200);
+}
+
+#login-button {
+    border: none;
+    padding: 7px;
+    background: var(--color-gradient);
+    color: var(--color-light-50);
+    font-size: 18px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+#login-button:hover {
+    transform: scale(1.02);
+    transition: ease-out 0.5s;
+}
+
+
+
+/*DARK MODE*/
+.dark#container {
+    background: var(--color-gradientDark);
+}
+
+.dark#login-form,
+.dark#login-button{
+    color: var(--color-light-50);
+    background-color: var(--color-dark-100);
+}
+
+.dark#login-form #input-field input,
+.dark#login-form #input-field i {
+    color: var(--color-light-50);
+}
+
