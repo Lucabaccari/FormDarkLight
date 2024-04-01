@@ -61,7 +61,7 @@
     align-items: center;
     justify-content: space-between;
 }
-#form-hearder h1{
+#form-header h1{
     font-size: 40px;
 }
 
@@ -200,5 +200,51 @@
 .dark#login-form #input-field input,
 .dark#login-form #input-field i {
     color: var(--color-light-50);
+}
+
+/*Media query*/
+
+@media (width <= 400px) {
+    
+    #login-form {
+        padding: 12px 10px;
+        gap: 15px;
+    }
+
+    #form-header h1{
+        font-size: 30px;
+    }
+    
+    #moon-icon{
+        font-size: 20px;
+        padding: 6px;
+        
+    }
+
+    #social-media img {
+        width: 25px;
+    }
+
+    #input-field input {
+        width: 230px;
+        font-size: 14px;  
+    }
+}
+
+@media (width <= 320px) {
+    
+    #login-form {
+        padding: 8px 8px;
+        gap: 8px;
+    }
+
+    #input-field input {
+        width: 200px;
+        font-size: 12px;  
+    }
+
+    #form-header h1{
+        font-size: 25px;
+    }
 }
 
